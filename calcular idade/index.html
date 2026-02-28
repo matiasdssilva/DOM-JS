@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Criando uma calculadora com DOM -->
+    <main>
+        <h1>Calculadora de IMC</h1>
+        <section class="cadInformacoes">
+            <h3>Cadastro de informações: </h3>
+            <div class="container-form">
+                <form method="post" id="formImc">
+                    <div class="campoForm">
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nomeUsuario" id="nome" placeholder="Nome Completo">
+                    </div>
+
+                    <div class="campoForm">
+                        <label for="ano">Ano: </label>
+                        <input type="date" name="AnoUsuario" id="Ano" min="1900" max="2026"
+                            placeholder="Insira seu peso">
+                    </div>
+                    </div>
+                    <div class="conjuntoBotoes">
+                        <button type="reset">Limpar</button>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="cadastroUsuarios">
+            <h3>Usuários Cadastrados:</h3>
+
+            <table>
+                <caption>Tabela de usuários</caption>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ano Nascimento</th>
+                        <th>Idade</th>
+                        <th>Data Cad</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpoTabela">
+
+                </tbody>
+            </table>
+
+            <button class="botaoTabela" onclick="deletarRegistros()">Limpar registros</button>
+
+        </section>
+    </main>
+
+
+    <script src="Exercicio.js" defer></script>    
+</body>
+
+</html>

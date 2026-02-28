@@ -1,0 +1,201 @@
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #1c77d7;
+    --cor-apoio: #fbfafa;
+    --bg-color: #eff0f8;
+    --espacamento-padrao: 16px;
+    --fonte-principal: 'Verdana', sans-serif;
+    --font-color: #2e2e2e;
+}
+
+main {
+    background-color: var(--cor-apoio);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    /* height: 100vh; */
+    padding: 50px;
+}
+
+main h1 {
+    font-size: 3.5rem;
+    color: var(--cor-primaria);
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.cadInformacoes {
+    text-align: center;
+}
+
+.container-form {
+    font-family: var(--fonte-principal);
+    width: 500px;
+    background-color: var(--bg-color);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 3px 4px 9px 0px #16161657;
+}
+
+.campoForm {
+    margin-bottom: var(--espacamento-padrao);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.campoForm input {
+    width: 350px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.campoForm input:focus {
+    transition: .4s;
+    border-color: var(--cor-primaria);
+    outline: none;
+    color: var(--font-color);
+}
+
+/* Remover Arrows input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.conjuntoBotoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.conjuntoBotoes button {
+    margin-top: var(--espacamento-padrao);
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-apoio);
+}
+
+.conjuntoBotoes button:hover {
+    transition: .4s;
+    scale: 1.1;
+    background-color: #155daa;
+}
+
+
+/*  */
+.cadastroUsuarios {
+    margin-top: 30px;
+}
+
+table {
+    background-color: var(--bg-color);
+    margin-top: 10px;
+    padding: 50px;
+    border-radius: 7px;
+    box-shadow: 3px 4px 9px 0px #16161657;
+}
+
+caption {
+    text-align: left;
+    font-size: 20px;
+}
+
+.cadastroUsuarios h3 {
+    text-align: center;
+
+}
+
+.botaoTabela {
+    margin-top: var(--espacamento-padrao);
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-apoio);
+}
+
+table thead tr {
+    font-size: 22px;
+    color: var(--cor-primaria);
+}
+
+table thead tr th {
+    padding: 5px 20px;
+}
+
+tbody>tr:nth-child(odd) {
+    background-color: var(--cor-primaria);
+}
+
+/* responsividade */
+@media screen and (max-width: 480px) {
+    main h1 {
+        font-size: 40px;
+    }
+
+
+    main h3 {
+        font-size: 22px;
+    }
+
+    .container-form {
+        padding: 20px;
+        width: 400px;
+    }
+
+    table {
+        margin-top: 5px;
+        padding: 20px;
+        overflow-x: scroll;
+
+    }
+
+    table th {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    table th {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 20ch auto;
+        padding: 10px 15px;
+
+    }
+
+    td {
+        display: table-cell;
+        text-align: center;
+    }
+
+    td:before {
+        content: attr(data-cell) ":";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
